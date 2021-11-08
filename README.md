@@ -2,7 +2,7 @@
 
 This a mini-project that was created as a simple Front-End single-page website for a business related to Decoration & Interior Designs. The main Idea to craete this project is to get familiar with Sass along side with uderstanding some new concepts such as JQuery and Bootstrap libraries.
 
->As GitHub Page is a static hosting, before deploying sass files, you need to compile them first as .css file THEN apply the file were the project deploied. For that a style.css file was added to the project files and refer only the .css files in the index.html file because browser couldn't understand scss file.
+>As GitHub Page is a static hosting, before deploying sass files, you need to compile them first as .css file THEN apply the file were the project deploied. For that a styles.css file was added to the project files and refer only the .css files in the index.html file because browser couldn't understand scss file.
 
 ## Website link
 
