@@ -1,0 +1,601 @@
+///***Defined Variables****///
+$myColor: rgb(80, 170, 178);
+$myBackground: #fff;
+$mySecondColor: rgb(247, 247, 247);
+$myBlack: #000;
+@mixin shadow($x, $y, $blur, $S, $c) {
+  box-shadow: $x $y $blur $S $c;
+  -moz-box-shadow: $x $y $blur $S $c;
+  -webkit-box-shadow: $x $y $blur $S $c;
+  -khtml-box-shadow: $x $y $blur $S $c;
+}
+
+///***start Styling***///
+body.bg-custom {
+  // background-color:$myColor;
+  background-color: $myBackground;
+}
+//////*How to set the navbar*///////////////////////////
+#header-1 {
+  .bg-custom {
+    //opacity:0.7;
+    background: rgb(255, 255, 255);
+  }
+  div {
+    ul {
+      a {
+        color: $myColor;
+        &:hover {
+          color: black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.dropdown-menu {
+  a {
+    font-size: 14px;
+  }
+}
+.dropdown {
+  margin-top: -5px;
+}
+.custom-toggler.navbar-toggler {
+  border: 2px solid $myColor;
+}
+.custom-toggler {
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(80,170,178, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/////////////////*How to set the Hero header*////////////////////////////
+#sec-1 {
+  margin-top: 100px;
+  .jumbotron-fluid {
+    position: relative;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/originals/4b/24/15/4b241594112a84abdb406f2f3534867f.jpg');
+    height: 450px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 450px;
+      background: rgba(33, 33, 45, 0.55);
+    }
+  }
+  div {
+    color: $myBackground;
+    .size {
+      width: 65%;
+      text-align: left;
+      font-size: 25px;
+      margin-left: 15px;
+      color:#cfc6c6;
+    }
+    .colo {
+      margin: {
+        left: 15px;
+        top: 5px;
+      }
+      text-align: left;
+      width: 70%;
+    }
+    button {
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: $myColor;
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-left: 15px;
+      border-radius: 5px;
+      border: 1px solid $myColor;
+      &:hover {
+        color: $myColor;
+        background: $myBackground;
+        border: 1px solid $myBackground;
+        box-shadow: none;
+      }
+      &:focus,
+      &:active {
+        color: $myColor;
+        background: $myBackground;
+        border: 1px solid $myBackground;
+        box-shadow: none;
+      }
+    }
+  }
+}
+#sec-1 * {
+  position: relative; /* Makes elements display above overlay. */
+}
+/////////////////*How to set the Main text*////////////////////////////
+#intro {
+  .holo {
+    margin: auto;
+    text-align: center;
+    //border:2px solid green;
+    a {
+      //border:1px solid black;
+      text-decoration: none;
+      font-size: 18px;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      text-align: justify;
+      font-size: 20px;
+    }
+  }
+}
+/////////////////*How to set the Main Definition*////////////////////////////
+.img-div {
+  width: 98%;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: auto;
+  //background:white;
+}
+.image img {
+  max-width: 100%;
+  /*this is the only way to make image responsive inside the flexbox*/
+  margin: auto;
+  display: block;
+  //border:2px solid #fff;
+}
+.image {
+  /*responsive*/
+  max-width: 99%;
+  height: auto;
+  /* */
+  /*centerized*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* */
+}
+#main-2 {
+  max-width: 1200px;
+  .main-row {
+    max-width: 80%;
+  }
+  .main {
+    //border:2px solid black;
+    height: 90%;
+    background: $mySecondColor;
+    margin: auto;
+    z-index: 2;
+    margin: {
+      left: -110px;
+    }
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    }
+  }
+}
+////***********Abot the website********////
+.size-im {
+  object-fit: cover;
+}
+#about-us {
+  .one {
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .hello {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: $mySecondColor;
+    width: 95%;
+    min-height: 400px;
+
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+      display: inline-block;
+    }
+    //border:1px solid red;
+    border-radius: 10px;
+  }
+  .total {
+    max-width: 1400px;
+
+    //border:2px solid black;
+    p {
+      font-size: 16px;
+    }
+    a {
+      font-weight: bold;
+      color: $myColor;
+      font-size: 20px;
+    }
+  }
+}
+#Projects {
+  .one {
+    //max-width:1200px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .two {
+    max-width: 1400px;
+  }
+  .pictures1 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('https://freshome.com/wp-content/uploads/2014/10/interior-designer-4-1.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .pictures2 {
+    position: relative;
+    //text-align:center;
+    width: 100%;
+    height: 300px;
+    background: url('https://www.sarahgallop.com/wp-content/gallery/interior-design-in-progress/Interior_Kitchen_RMBro.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .box {
+    max-width: 70%;
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+    padding: {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 15px;
+    }
+    left: 0;
+    right: 10%;
+    top: 20%;
+    background: $mySecondColor;
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+    }
+    a {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+#Our-Team {
+  .one {
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .two {
+    max-width: 1400px;
+  }
+  .shad {
+    @include shadow(10px, -12px, 2px, 7px, $myColor);
+    &:hover {
+      @include shadow(10px, -12px, 2px, 7px, $myBlack);
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $myBlack;
+    &:hover {
+      color: $myColor;
+    }
+  }
+}
+#Our-Work {
+  .one {
+    //max-width:1200px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .gallery {
+    max-width: 1200px;
+    //border:1px solid black;
+    .cards {
+      max-width: 1200px;
+      display: grid;
+      grid-gap: 1rem;
+      .card {
+        //background-color: $myColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        border: 1px solid $myBackground;
+        text-align: center;
+        max-width: 310px;
+        height: 360px;
+        .gallery__img {
+          width: 300px;
+          height: 300px;
+          border: 1px solid $myBackground;
+          border-radius: 10px;
+          object-fit: cover;
+          &:hover {
+            border: 1px solid #777;
+            @include shadow(2px, 2px, 3px, 2px, #f2f2f2);
+          }
+        }
+      }
+    }
+  }
+  .but {
+    button {
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: $myColor;
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-left: 0;
+      border-radius: 5px;
+      border: 1px solid $myColor;
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid $myBackground;
+        box-shadow: none;
+      }
+    }
+  }
+}
+#Contact-us {
+  .one {
+    //max-width:1200px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $myColor;
+      margin: auto;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .total {
+    max-width: 1400px;
+    //border:2px solid black;
+    a {
+      color: $myBlack;
+      &:hover {
+        color: $myColor;
+        font-weight: bold;
+      }
+    }
+  }
+}
+#foot p {
+  font-size: 13px;
+  color: #333;
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  #sec-1 {
+    div {
+      .colo {
+        width: 50%;
+      }
+    }
+  }
+}
+@media (min-width: 965px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1500px) {
+  #sec-1 {
+    .jumbotron-fluid {
+      height: 60vh;
+      &:before {
+        height: 60vh;
+      }
+    }
+  }
+  #Projects {
+    .pictures1,
+    .pictures2 {
+      height: 400px;
+    }
+  }
+}
+@media (min-width: 3000px) {
+  #main-2 {
+    max-width: 1500px;
+  }
+}
+@media (max-width: 991px) {
+  #main-2 {
+    .main {
+      background-color: $myBackground;
+      p {
+        width: 94%;
+        text-align: justify;
+        font-size: 18.5px;
+      }
+      margin: {
+        top: 15px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    margin-top: 0px;
+  }
+  .dropdown-menu {
+    border: none !important;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    a {
+      font-size: 12px;
+    }
+  }
+  #Our-Team {
+    .shad {
+      @include shadow(25px, -30px, 2px, 7px, $myColor);
+      &:hover {
+        @include shadow(25px, -30px, 2px, 7px, #000);
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  #about-us {
+    .hello {
+      margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 460px) {
+  #intro {
+    .holo {
+      a {
+        font-size: 14px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  #about-us {
+    .one {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  #Projects {
+    .one {
+      a {
+        font-size: 14px;
+      }
+    }
+    .box {
+      left: 10%;
+      max-width: 90%;
+      h4 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+  #Our-Team {
+    .one {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  #main-2 {
+    .main {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  #sec-1 {
+    div {
+      .colo {
+        font-size: 28px;
+      }
+    }
+  }
+  #intro {
+    .holo {
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+  #Our-Work {
+    .gallery {
+      .cards {
+        .card {
+          .gallery__img {
+            width: 280px;
+            height: 280px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  body.bg-custom{
+    background-color: red;
+  }
+}
